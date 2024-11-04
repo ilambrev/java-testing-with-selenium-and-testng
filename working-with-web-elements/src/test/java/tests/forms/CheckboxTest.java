@@ -15,6 +15,6 @@ public class CheckboxTest extends BaseTest {
         formsPage.unClickReadingHobbyCheckbox();
 
         boolean isReadingHobbyCheckboxSelected = formsPage.isReadingHobbyCheckboxSelected();
-        Assert.assertFalse(isReadingHobbyCheckboxSelected, "Reading Hobby Checkbox Is Selected");
+        Assert.assertFalse(isReadingHobbyCheckboxSelected, "\n Reading Hobby Checkbox Is Selected \n");
     }
 }

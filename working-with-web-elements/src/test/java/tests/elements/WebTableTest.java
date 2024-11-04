@@ -17,6 +17,6 @@ public class WebTableTest extends BaseTest {
         webTablePage.clickSubmitButton();
         String actualAge = webTablePage.getTableAge(email);
 
-        Assert.assertEquals(actualAge, expectedAge, "Actual & Expected Ages Do Not Match");
+        Assert.assertEquals(actualAge, expectedAge, "\n Actual & Expected Ages Do Not Match \n");
     }
 }
