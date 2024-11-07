@@ -21,4 +21,20 @@ public class FramesTest extends BaseTest {
         Assert.assertEquals(actualHeaderText, expectedHeaderText,
                 "\n Actual & Expected Header Text Do Not Match \n");
     }
+
+    @Test
+    public void testFrameSmallBox() {
+        var framesPage = homePage.goToAlertsFramesWindowsCard().clickFrames();
+        String actualSmallBoxText = framesPage.getTextInSmallFrame();
+        String expectedSmallBoxText = "This is a sample page";
+
+        Assert.assertEquals(actualSmallBoxText, expectedSmallBoxText,
+                "\n Actual & Expected Text Do Not Match \n");
+
+        String actualHeaderText = framesPage.getHeaderFramesText();
+        String expectedHeaderText = "Frames";
+
+        Assert.assertEquals(actualHeaderText, expectedHeaderText,
+                "\n Actual & Expected Header Text Do Not Match \n");
+    }
 }
