@@ -15,6 +15,7 @@ import pages.HomePage;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 import static pages.BasePage.delay;
 import static utilities.Utility.setUtilityDriver;
@@ -29,6 +30,12 @@ public class BaseTest {
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        // Implicit Wait
+        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        // Page Load Timeout
+        // driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+        // Java Script Timeout
+        // driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(5));
     }
 
     @BeforeMethod
